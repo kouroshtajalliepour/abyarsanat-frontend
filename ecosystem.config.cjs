@@ -1,11 +1,11 @@
 module.exports = {
   apps: [
     {
-      name: 'front-service',
+      name: 'abyarsanat-front-service',
       script: '.output/server/index.mjs',
       exec_mode: 'cluster',
       instances: 'max',
-      port: 5000
+      port: 4400
     }
   ]
 }
