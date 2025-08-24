@@ -1,0 +1,96 @@
+//! use these colors if its needed
+
+// white to black
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+// green
+$green-50: #f6fcf9 !default;
+$green-100: #e2f5eb !default;
+$green-200: #d2f0e0 !default;
+$green-300: #ace4c6 !default;
+$green-400: #86d7ac !default;
+$green-500: #57c88c !default;
+$green-600: #3ebd7a !default;
+$green-700: #319661 !default;
+$green-800: #226742 !default;
+$green-900: #0f2f1e !default;
+
+//aqua
+$aqua-100: #e2f5f5 !default;
+$aqua-200: #d2f0ef !default;
+$aqua-300: #ace4e2 !default;
+$aqua-400: #86d7d5 !default;
+$aqua-500: #57c8c4 !default;
+$aqua-600: #3ebdb9 !default;
+$aqua-700: #319693 !default;
+$aqua-800: #226765 !default;
+$aqua-900: #0f2f2e !default;
+
+//blue
+$blue-100: #e2ecf5 !default;
+$blue-200: #d2e2f0 !default;
+$blue-300: #accae4 !default;
+$blue-400: #86b1d7 !default;
+$blue-500: #5793c8 !default;
+$blue-600: #3e82bd !default;
+$blue-700: #316796 !default;
+$blue-800: #224767 !default;
+$blue-900: #0f202f !default;
+
+// other colors
+$green: #28a745 !default;
+$red: #dc3545 !default;
+$warning: #FFC107;
+
+//* the colors we use in website
+
+$primary: #385e86;
+$secondary: rgb(7, 62, 54);
+$optional-bg: #FAFAFF;
+$optional: #b7ebe2;
+$success: $green;
+$danger: $red;
+$blue: rgb(26, 26, 169);
+$secondary-light: $blue-100;
+
+
+$title-color: black;
+$subTitle-color: black;
+$text-color: black;
+$bg: $white;
+$bg-secondary: $aqua-200;
+$bg-dark: $blue-900;
+$deleted-price: #838386;
+$border-color: #e0e0e2;
+$passive-icon-color: #e0e0e2;
+
+
+//dark blue
+$dark-blue-title: #3f4064;
+$dark-blue-button: #080a38;
+
+//light blue
+$light-blue: #19bfd3;
+
+//gray
+$gray-subtitle: black;
+$gray-title: #5A5C7A;
+$gray-icon: black;
+$gray-bg: #F1F2F4;
+
+//red
+$red-bg: #ef4056;
+$red-hover: #ef394E;
+
+//green
+$light-green: #39ae00;

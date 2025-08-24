@@ -1,0 +1,33 @@
+.page-enter-active,
+.page-leave-active{
+  transition: all 0.3s;
+}
+.page-enter-from {
+  transform: translateX(100%);
+}
+.page-leave-to {
+  transform: translateX(-100%);
+}
+
+.user-page-enter-from,
+.user-page-leave-to {
+    transform: none;
+}
+
+
+@include lg {
+  .user-page-enter-active,
+  .user-page-leave-active{
+    transition: all 0.3s;
+  }
+
+  .page-enter-from,
+  .page-leave-to,
+  .user-page-enter-from,
+  .user-page-leave-to {
+    transform: none;
+    opacity: 0;
+    filter: blur(1rem);
+  }
+}
+

@@ -1,0 +1,286 @@
+// typography
+@import 'typography';
+
+// variables (colors, functions, mixins, ...)
+@import 'helpers/variables';
+
+// basic element styles
+@import 'elements';
+
+// helpers
+@import 'helpers/helpers';
+@import 'transitions';
+@import 'animations';
+
+// * resets
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pinar', sans-serif;
+  &::selection {
+    background: $green-100 !important;
+    color: #000000;
+  }
+  &::-moz-selection {
+    background: $green-100 !important;
+    color: #000000;
+  }
+  button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: black;
+  }
+  li{
+    list-style: none;
+  }
+}
+
+body {
+  background-color: white;
+  overflow-x: hidden;
+}
+
+.cc-color-override--732197953.cc-window{
+  background-color: white;
+}
+// .cc-banner .cc-message{
+//   color: ;
+// }
+.cc-color-override--732197953 .cc-btn{
+  color: $primary;
+  border-color: $primary;
+  background-color: $border-color;
+}
+
+html:lang(en) {
+  direction: ltr;
+}
+
+html:lang(fa) {
+  direction: rtl;
+}
+pre {
+  color: black;
+}
+.dir-ltr {
+  direction: ltr;
+}
+
+// * my scroll bar
+.custom-scroll-y {
+  scrollbar-width: thin;
+  scrollbar-color: $primary transparent;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+.custom-scroll-x{
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: $primary transparent;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary;
+    border-radius: 3px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
+
+
+// * components
+.logo-wrapper{
+  max-width: 120px;
+  display: flex;
+  &.no-max-width {
+    max-width: unset;
+  }
+  .login-logo{
+    width: 100%;
+    height: 85px;
+  }
+  svg{
+      height: 85px;
+      width: 100%;
+      fill: $primary;
+  }
+  &.smaller-logo{
+    svg{
+      height: 70px;
+    }
+  }
+  &.full-screen{
+    svg{
+      height: 120px;
+    }
+  }
+  @include lg {
+    max-width: unset;
+  }
+}
+.app-default-modal-wrapper{
+  backdrop-filter: blur(5px);
+  z-index: 8;
+  position: relative;
+  cursor: pointer;
+  .modal{
+    width: 100%;
+    height: 100%;
+    
+    cursor: default;
+  }
+
+  &.info-modal{
+    .modal{
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      border: 1px solid $secondary;
+      bottom: 0;
+      height: 75%;
+    }
+  }
+  &.fullscreen-modal{
+    backdrop-filter: blur(20px);
+    .modal{
+      background-color: transparent; 
+      max-height: unset; 
+      max-width: unset; 
+      width: unset;
+      border: none;
+      .modal-body{
+        display: flex;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  @include lg {
+    .modal{
+      border: 1px solid $secondary;
+      bottom: unset;
+      border-radius: 10px;
+      max-width: 550px;
+      max-height: 700px;
+      width: 50%;
+      min-height: 60%;
+    }
+  }
+}
+.binary-form-modal-wrapper {
+  backdrop-filter: blur(5px);
+  .modal {
+    width: 70%;
+    max-width: 550px;
+    padding: 50px 20px;
+    border-radius: 10px;
+    border: 1px solid $border-color;
+  }
+}
+.form-submit-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .form-submit-button {
+    background-color: $primary;
+    border: 1px solid $primary;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 10px 8px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 20px;
+    &:hover {
+      background-color: white;
+      color: $primary;
+    }
+  }
+}
+
+.modal-open {
+  overflow: hidden !important;
+  .dashboard-content{
+    overflow: hidden !important;
+  }
+}
+.main{
+  margin-top: 65px;
+  margin-bottom: 17vw;
+}
+
+
+// * user
+
+.user-layout-wrapper-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border-bottom: 1px solid $primary;
+  position: sticky;
+  top: calc($top-of-the-window-xs);
+  z-index: 2;
+  background: $optional-bg;
+  margin-top: 10px;
+  .user-layout-wrapper-header-title {
+    font-size: .9em;
+  }
+  
+  @include lg {
+    margin: 0 10px;
+    border: 1px solid $primary;
+    top: calc($top-of-the-window-lg + 5px);
+    border-radius: 5px;
+    margin: 20px;
+    margin-top: 0;
+    &::before{
+      content: '';
+      top: -6px;
+      width: 100%;
+      height: 5px;
+      background-color: white;
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+.user-page-body-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 0 20px;
+  padding-top: 20px;
+  height: 100%;
+  background-color: $optional-bg;
+
+  .user-loading-wrapper {
+    padding: 40px 0;
+    display: flex;
+    width: 100%;
+    max-height: 400px;
+    justify-content: center;
+    border: 1px solid $primary;
+    border-radius: 10px;
+  }
+
+  @include lg {
+    border: 1px solid $primary;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+  }
+}
+

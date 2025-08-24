@@ -1,0 +1,68 @@
+// * animation
+
+@keyframes appear {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+@keyframes disappear {
+0% {
+    opacity: 1;
+    display: flex;
+}
+100% {
+    opacity: 0;
+    display: none;
+}
+}
+@keyframes slideInFromRight {
+0% {
+    transform: translateX(100%);
+}
+100% {
+    transform: translateX(0%);
+}
+}
+@keyframes slideOutFromRight {
+0% {
+    transform: translateX(0%);
+}
+100% {
+    transform: translateX(100%);
+}
+}
+@keyframes slideInFromLeft {
+0% {
+    transform: translateX(-100%);
+}
+100% {
+    transform: translateX(0%);
+}
+}
+@keyframes slideOutFromLeft {
+0% {
+    transform: translateY(0%);
+}
+100% {
+    transform: translateY(-100%);
+}
+}
+@keyframes slideUp {
+0% {
+    transform: translateY(100%);
+}
+100% {
+    transform: translateY(0%);
+}
+}
+@keyframes slideDown {
+0% {
+    transform: translateY(0%);
+}
+100% {
+    transform: translateY(100%);
+}
+}

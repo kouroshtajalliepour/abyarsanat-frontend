@@ -1,0 +1,31 @@
+$xs: 360px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+$full-window-xs: calc(100vh - 130px);
+$full-window-xs-with-main-banner: calc(100vh - 165px);
+$full-window-lg: calc(100vh - 165px);
+$top-of-the-window-xs: 60px;
+$top-of-the-window-lg: 105px;
+$bottom-of-the-window-xs: 65px;
+
+$grid-breakpoints: (
+  xs: 360px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
+$container-max-widths: (
+  xs: 330px,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+) !default;

@@ -1,0 +1,101 @@
+/// Word Wrap fix for long spaceless strings
+/// @link https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+@mixin word-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  // hyphens: auto;
+}
+
+/// Ellipsis fix for long spaceless strings
+/// @link https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+@mixin ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/// Mixin - Full Width, even outside container
+/// @param {bool} $undo [false]
+/// @link https://css-tricks.com/full-width-containers-limited-width-parents/ Source
+@mixin full-width($undo: false) {
+  @if $undo {
+    margin-left: 0;
+    margin-right: 0;
+    position: static;
+    left: auto;
+    right: auto;
+    width: auto;
+    max-width: 100%;
+  } @else {
+    width: 100vw;
+    max-width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
+
+// Media query helpers
+// -----------------------------------------------------------------------------
+$defaultIcon: "svg";
+@mixin xs {
+  @media screen and (max-width: ($xs)) {
+    @content;
+  }
+}
+@mixin sm {
+  @media screen and (min-width: ($sm)) {
+    @content;
+  }
+}
+@mixin md {
+  @media screen and (min-width: ($md)) {
+    @content;
+  }
+}
+@mixin lg {
+  @media screen and (min-width: ($lg)) {
+    @content;
+  }
+}
+@mixin xl {
+  @media screen and (min-width: ($xl)) {
+    @content;
+  }
+}
+@mixin xxl {
+  @media screen and (min-width: ($xxl)) {
+    @content;
+  }
+}
+
+//  Image + icons
+//  ---------------------------------------------------------------------------------------
+
+@mixin icon($name, $type: $defaultIcon) {
+  @if ($type !=$defaultIcon) {
+    background-image: url("/icons/"+$name+ '.'+$type);
+  }
+
+  // Consider the defaultIcon type as SVG
+  @else {
+    $type: $defaultIcon;
+    background-image: url("/icons/"+$name+".svg");
+  }
+}
+
+$defaultImage: "png";
+
+@mixin image($name, $type: $defaultImage) {
+  @if ($type !=$defaultImage) {
+    background-image: url("/images/"+$name+ '.'+ $type);
+  }
+
+  // Consider the defaultImage type as JPG
+  @else {
+    background-image: url("/images/"+$name+".png");
+  }
+}

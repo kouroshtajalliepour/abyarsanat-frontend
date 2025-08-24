@@ -1,0 +1,155 @@
+// html
+html {
+  scroll-behavior: smooth;
+}
+
+// Headings
+// -----------------------------------------------------------------------------
+
+h1 {
+  font-size: 30px;
+  color: $primary;
+  @include lg{     
+    font-size: 32px;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  color: $title-color;
+  @include lg{     
+    font-size: 28px;
+  }
+}
+
+h3 {
+  font-size: 22px;
+  color: $subTitle-color;
+  @include lg{     
+    font-size: 24px;
+  }
+}
+
+h4 {
+  font-size: 18px;
+  color: $subTitle-color;
+  @include lg{     
+    font-size: 20px;
+  }
+}
+
+h5 {
+  font-size: 16px;
+  color: $subTitle-color;
+  @include lg{     
+    font-size: 18px;
+  }
+}
+
+h6 {
+  font-size: 16px;
+}
+
+// Text
+// -----------------------------------------------------------------------------
+p {
+  font-size: 1em;
+  color: $text-color;
+  font-weight: 300;
+  @include lg{     
+    font-size: 1em;
+  }
+}
+
+// Links
+// -----------------------------------------------------------------------------
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+// Other
+// -----------------------------------------------------------------------------
+// picture {
+//   width: 100%;
+
+//   img {
+//     // width: 100%;
+//     aspect-ratio: 3/2;
+
+//   }
+// }
+img {
+  block-size: auto;
+  object-fit: contain;
+}
+
+span {
+  color: $text-color;
+}
+
+span.currency {
+  color: $text-color;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+
+input[type='radio'] {
+  position: relative;
+  appearance: none;
+
+  &:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: 3px;
+    left: 0px;
+    position: relative;
+    background-color: $white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid $secondary;
+    box-shadow: inset 0 0 0 2px $white;
+  }
+  &:checked {
+    &:after {
+      background-color: $secondary;
+      border: 1px solid $secondary;
+    }
+  }
+}
+
+//loading skeleton
+.skeleton-loader {
+  width: 100%;
+  // height: 15px;
+  // display: block;
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 80%
+    ),
+    lightgray;
+  background-repeat: repeat-y;
+  background-size: 50px 500px;
+  background-position: 0 0;
+  animation: shine 1s infinite;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+@keyframes shine {
+  to {
+    background-position: 100% 0;
+  }
+}
