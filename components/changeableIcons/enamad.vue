@@ -6,16 +6,18 @@ const { t } = useI18n();
   <a
     referrerpolicy="origin"
     target="_blank"
-    href="https://trustseal.enamad.ir/?id=541841&Code=tbgCQBHXJ3SfqhcrLkOpxM4cFnZL3n7x"
     :aria-label="t('pages.links.enamad')"
-    ><img
+    href="https://trustseal.enamad.ir/?id=638150&Code=xkIC8I5VefOUfvWsYEs62KJX7okIGGOS"
+  >
+    <img
       referrerpolicy="origin"
-      src="https://trustseal.enamad.ir/logo.aspx?id=541841&Code=tbgCQBHXJ3SfqhcrLkOpxM4cFnZL3n7x"
+      src="https://trustseal.enamad.ir/logo.aspx?id=638150&Code=xkIC8I5VefOUfvWsYEs62KJX7okIGGOS"
       alt="enamad-logo"
       name="enamad-logo"
       style="cursor: pointer"
-      code="tbgCQBHXJ3SfqhcrLkOpxM4cFnZL3n7x"
+      code="xkIC8I5VefOUfvWsYEs62KJX7okIGGOS"
       width="75"
       height="75"
-  /></a>
+    />
+  </a>
 </template>
