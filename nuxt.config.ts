@@ -47,7 +47,7 @@ export default defineNuxtConfig({
         },
       ]
       // script:[
-      //   { src: "https://abyarsanat.com", async: true, defer: true },
+      //   { src: "https://abyarsanat.ir", async: true, defer: true },
       // ]
     }
   },
