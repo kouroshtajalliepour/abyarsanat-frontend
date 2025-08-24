@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       charset: 'utf-16',
-      title: 'ماویدا هوم',      
+      title: 'آبیار صنعت',      
       meta: [              
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width' },
@@ -74,7 +74,7 @@ export default defineNuxtConfig({
     defaultLocale: 'fa',
     compilation: { jit: true, strictMessage: true, escapeHtml: false },
     locales: [
-      { code: "fa", iso: "fa", dir: 'rtl', displayName: "فارسی", title:"ماویدا هوم" }
+      { code: "fa", iso: "fa", dir: 'rtl', displayName: "فارسی", title:"آبیار صنعت" }
     ],
     detectBrowserLanguage: {
       useCookie: false,
